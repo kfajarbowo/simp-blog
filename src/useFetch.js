@@ -4,11 +4,12 @@ const useFetch = (url) =>{
    const [data, setData] = useState(null);
    const [isPending, setIsPending] = useState(true);
    const [error, setError] = useState(null);
+   
     useEffect(async()=>{
         const abortCont = new AbortController();
 
         setTimeout(()=>{
-        //fetch data dari API in homejs
+        //fetch data dari API in home
          fetch(url,{signal: abortCont.signal})
          //if API tidak bisa diambil,maka muncul throw error
          .then(res => {
@@ -35,7 +36,7 @@ const useFetch = (url) =>{
         }, 500);
         return () => abortCont.abort();
 
-     }, [url]);
+     }, [url]); 
 
      return {data , isPending , error};
 }

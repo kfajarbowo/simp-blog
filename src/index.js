@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Img from './3.png';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
